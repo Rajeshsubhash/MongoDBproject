@@ -1,0 +1,5 @@
+FROM mongo:latest
+LABEL "Auther"="Rajesh"
+
+ENV MONGO_INITDB_ROOT_USERNAME: root
+ENV MONGO_INITDB_ROOT_PASSWORD: Srnaluva6@
