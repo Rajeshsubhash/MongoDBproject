@@ -1,0 +1,13 @@
+
+version: '3.8'
+services:
+  mongodb:
+    image: vprocontainers/mongodb
+    ports:
+      - "8081:8081"
+    volumes:
+      - vprodbdata:/var/lib/mongodb
+    environment:
+      - MONGO_INITDB_ROOT_PASSWORD: Srnaluva6@
+volumes:
+  vprodbdata: {}
