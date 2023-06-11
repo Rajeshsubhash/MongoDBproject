@@ -1,8 +1,8 @@
 version: '3.8'
 services:
   mongo:
-    image: mongo:latest
-    container_name: mongodb
+    build: 
+      context: ./MongoDB
     restart: always
     ports:
       - 27017:27017
