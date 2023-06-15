@@ -1,28 +1,17 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Pod
 metadata:
   name: mongodb
   labels:
-    app: mongoapp
+    app: mongodb
 spec:
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        app: mongodb
-    spec:
-      containers:
-        - name: mongodb
-          image: rajeshtsdocker/mongodb:V2
-          volumeMounts:
-             -mountPath: /data/db
-              name: mongodb 
-          ports:
-            - containerPort: 8081
-      nodeSelector:
-         zone: us-east-2a
-      volumes:
-        -name: mongodb
-        awsElasticBlockStore:
-           volumeID: vol-097b6583ae54ab619
-           fsType: ext4     
+  containers:
+  - name: mongob
+    image: rajeshtsdocker/mongodb:V2
+    ports:
+    - name: mongodb-port
+      containerPort: 8081
+
+    env:
+     - name: MONGO_INITDB_ROOT_PASSWORD
+       value: "Srnaluva6@"
