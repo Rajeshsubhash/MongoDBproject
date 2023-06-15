@@ -12,7 +12,7 @@ spec:
       labels:
         app: mongodb
     spec:
-      containers:
+      containers:  
       - name: mongodb
         image: mongo:latest
         ports:
@@ -25,8 +25,8 @@ spec:
         volumeMounts:
           - name: mongo-data
             mountPath: /data/db
-     volumes:
+      volumes:
         - name: mongo-data
           awsElasticBlockStore:
-          volumeID: vol-0f5893ff776ceefa2
-          fsType: ext4
+            volumeID: vol-0f5893ff776ceefa2
+            fsType: ext4
