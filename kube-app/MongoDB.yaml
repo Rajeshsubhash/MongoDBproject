@@ -16,10 +16,10 @@ spec:
     spec:
       containers:
       - name: vprodb
-        image: rajeshtsdocker/mongodb:V2
+        image: mongo:latest
         ports:
         - name: mongodb-port
-          containerPort: 8081
+          containerPort: 27017
         env:
          - name: MONGO_INITDB_ROOT_USERNAME
             value: admin
