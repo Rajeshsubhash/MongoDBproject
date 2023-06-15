@@ -22,3 +22,11 @@ spec:
             value: admin
           - name: MONGO_INITDB_ROOT_PASSWORD
             value: Srnaluva6@
+        volumeMounts:
+          - name: mongo-data
+            mountPath: /data/db
+     volumes:
+        - name: mongo-data
+          awsElasticBlockStore:
+          volumeID: vol-0f5893ff776ceefa2
+          fsType: ext4
