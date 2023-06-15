@@ -22,7 +22,7 @@ spec:
           containerPort: 8081
         env:
          - name: MONGO_INITDB_ROOT_USERNAME
-            value: root
+            value: admin
          - name: MONGO_INITDB_ROOT_PASSWORD
            value: "Srnaluva6@"
         volumeMounts:
